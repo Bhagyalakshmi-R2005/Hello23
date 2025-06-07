@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'maven' // Make sure this name matches what's configured in Jenkins
+        maven 'Maven' // Ensure this matches the Maven name configured in Jenkins
     }
 
     stages {
@@ -14,19 +14,19 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
         stage('Run Application') {
             steps {
-                sh 'java -jar target/MavenToAzure-0.0.1-SNAPSHOT.jar'
+                bat 'java -jar target\\MavenToAzure-0.0.1-SNAPSHOT.jar'
             }
         }
     }
