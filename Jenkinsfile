@@ -21,7 +21,7 @@ pipeline {
       } 
      stage('Run Application') {  
             steps { 
-                sh 'java –jar target/SimpleCalci-0.0.1-SNAPSHOT.jar'  
+                sh 'java –jar target/-0.0.1-SNAPSHOT.jar'  
             } 
       } 
     } 
