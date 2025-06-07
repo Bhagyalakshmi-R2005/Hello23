@@ -6,7 +6,7 @@ pipeline {
     stages { 
         stage('Checkout') {  
             steps { 
-                git branch: 'master', url: ''  
+                git branch: 'master', url: 'https://github.com/Bhagyalakshmi-R2005/Hello23.git'  
             } 
     } 
      stage('Build') {  
